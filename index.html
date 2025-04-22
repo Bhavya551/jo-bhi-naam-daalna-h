@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavya Jain - Entrepreneur | Storyteller | Tech Enthusiast</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+         /* --- Your full CSS from paste-2.txt, unchanged --- */
+         :root {
+            --primary-color: #f5a623;
+            --secondary-color: #4a90e2;
+            --accent-color: #50e3c2;
+            --dark-color: #333;
+            --light-color: #f9f6e9;
+            --border-color: #f5a623;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: linear-gradient(135deg, #f9f6e9 0%, #f0ebd8 100%); color: var(--dark-color); line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1rem 0; position: relative; }
+        nav ul { display: flex; flex-wrap: wrap; list-style: none; gap: 1.5rem; }
+        nav ul li a { color: var(--dark-color); text-decoration: none; font-weight: 600; transition: var(--transition); position: relative; padding: 0.3em 0.7em; border-radius: 6px; }
+        nav ul li a:hover, nav ul li a.active { color: var(--primary-color); background: rgba(245, 166, 35, 0.08); }
+        .hero { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin: 2rem 0; background: var(--light-color); border-radius: 15px; padding: 2rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(245, 166, 35, 0.05) 0%, rgba(80, 227, 194, 0.05) 100%); z-index: 0; }
+        .profile { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 1; }
+        .profile-image { width: 200px; height: 200px; border-radius: 50%; border: 4px solid var(--primary-color); overflow: hidden; margin-bottom: 1.5rem; box-shadow: var(--shadow); }
+        .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+        .name { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary-color); text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); }
+        .tagline { font-size: 1.1rem; margin-bottom: 1.5rem; text-align: center; line-height: 1.4; }
+        .location, .birthday { display: flex; align-items: center; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .location i, .birthday i { margin-right: 0.5rem; color: var(--primary-color); }
+        .birthday { margin-bottom: 1rem; }
+        .contact { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .contact a { display: flex; align-items: center; color: var(--dark-color); text-decoration: none; transition: var(--transition); }
+        .contact a:hover { color: var(--primary-color); }
+        .contact i { margin-right: 0.5rem; color: var(--primary-color); }
+        .social { display: flex; gap: 1rem; margin-top: 1rem; }
+        .social a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--light-color); color: var(--dark-color); text-decoration: none; transition: var(--transition); box-shadow: var(--shadow); font-size: 1.2rem; }
+        .social a:hover { background: var(--primary-color); color: var(--light-color); transform: translateY(-3px); }
+        .section { background: var(--light-color); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: var(--shadow); border-left: 4px solid var(--border-color); transition: var(--transition); position: relative; overflow: hidden; }
+        .section:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); }
+        .section-title { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--primary-color); font-weight: 800; position: relative; display: inline-block; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 40px; height: 3px; background: var(--primary-color); }
+        .about-content { margin-bottom: 1rem; }
+        .skills-grid, .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .skill-card, .achievement-card { background: var(--light-color); border-radius: 10px; padding: 1.5rem; box-shadow: var(--shadow); transition: var(--transition); text-align: center; cursor: pointer; min-height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .skill-card:hover, .achievement-card:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); }
+        .skill-icon, .achievement-icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem; }
+        .skill-name, .achievement-title { font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600; }
+        .skill-level { height: 6px; background: rgba(0, 0, 0, 0.1); border-radius: 3px; margin-top: 0.8rem; position: relative; overflow: hidden; width: 100%; max-width: 140px; }
+        .skill-level-fill { position: absolute; top: 0; left: 0; height: 100%; background: var(--primary-color); animation: fillProgress 1.5s ease-out forwards; }
+        .timeline { position: relative; margin: 2rem 0; }
+        .timeline::before { content: ''; position: absolute; top: 0; left: 20px; height: 100%; width: 2px; background: var(--primary-color); }
+        .timeline-item { position: relative; margin-bottom: 2rem; padding-left: 3rem; }
+        .timeline-dot { position: absolute; left: 11px; top: 5px; width: 20px; height: 20px; border-radius: 50%; background: var(--primary-color); z-index: 1; }
+        .timeline-content { background: var(--light-color); border-radius: 10px; padding: 1.5rem; box-shadow: var(--shadow); cursor: pointer; }
+        .timeline-date { display: inline-block; padding: 0.3rem 0.6rem; background: var(--primary-color); color: white; border-radius: 15px; font-size: 0.8rem; margin-bottom: 0.5rem; }
+        .timeline-title { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .timeline-description { font-size: 0.95rem; }
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 999; display: none; }
+        .modal-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: #fff; padding: 2rem 1.5rem; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.18); max-width: 90vw; max-height: 90vh; overflow-y: auto; z-index: 1000; display: none; min-width: 320px; }
+        .modal-close { position: absolute; top: 10px; right: 18px; font-size: 2rem; color: #f5a623; cursor: pointer; font-weight: bold; }
+        .modal-content h2, .modal-content h3 { color: #f5a623; }
+        @media (max-width: 1100px) { .container { padding: 1rem; } .hero { grid-template-columns: 1fr; } .profile { margin-bottom: 2rem; } }
+        @media (max-width: 900px) { .skills-grid, .achievements-grid { grid-template-columns: 1fr 1fr; } .timeline-item { padding-left: 2.5rem; } }
+        @media (max-width: 700px) { .container { padding: 0.5rem; } .skills-grid, .achievements-grid { grid-template-columns: 1fr; } .modal-box { padding: 1rem 0.5rem; min-width: 0; width: 96vw; } .section { padding: 1rem; } .profile-image { width: 120px; height: 120px; } .name { font-size: 1.5rem; } .section-title { font-size: 1.2rem; } .timeline-dot { width: 14px; height: 14px; left: 3px; } .timeline::before { left: 10px; } }
+        @media (max-width: 480px) { .timeline-content, .achievement-content, .skill-card { padding: 1rem; } .profile-image { width: 90px; height: 90px; } .section-title { font-size: 1rem; } .timeline-item { padding-left: 1.2rem; } }
+        @keyframes fillProgress { from { width: 0; } to { width: var(--width); } }
+        .clickable, .skill-card, .achievement-card, .timeline-content, .job-responsibilities li { cursor: pointer; }
+        .site-headline {
+  position: relative;
+  background: linear-gradient(120deg, #ffe4d9 0%, #fff6e0 60%, #f9f6e9 100%);
+  color: #b46b5a; /* Rose gold/muted coral */
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 2.1rem 0 1.7rem 0;
+  border-radius: 20px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 6px 32px rgba(180, 107, 90, 0.07), 0 1.5px 8px rgba(245, 166, 35, 0.08);
+  border-bottom: 4px solid #f5a623;
+  overflow: hidden;
+  z-index: 20;
+}
+.site-headline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='%23fff' fill-opacity='0.13'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+}
+.site-headline::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, #f5a623 0%, #ffe4d9 100%);
+  margin: 1.3rem auto 0 auto;
+  border-radius: 2px;
+  z-index: 2;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .site-headline {
+    font-size: 1rem;
+    padding: 1.1rem 0 0.7rem 0;
+    border-radius: 12px;
+  }
+  .site-headline::after {
+    width: 36px;
+    height: 3px;
+    margin-top: 0.6rem;
+  }
+}
+/* Enhanced Navigation Bar */
+header nav {
+  width: 100%;
+  background: linear-gradient(90deg, #fff6e0 0%, #f9f6e9 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(245, 166, 35, 0.07);
+  border: 1.5px solid #f5e1a4;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  flex: 0 1 auto;
+}
+
+nav ul li a {
+  color: #7C5E3C;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.07rem;
+  letter-spacing: 0.03em;
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  position: relative;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 6px rgba(245, 166, 35, 0.04);
+  overflow: hidden;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #f5a623 0%, #ffe4d9 100%);
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+  z-index: 0;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #f5a623;
+  background: rgba(245, 166, 35, 0.11);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+@media (max-width: 900px) {
+  nav ul {
+    gap: 1rem;
+  }
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0.5em 0.7em;
+  }
+}
+.read-popup-trigger {
+  
+  position: static;
+  margin: 2.5rem auto 2rem auto; /* vertical spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #ffe4d9 0%, #f5a623 100%);
+  color: #7C5E3C;
+  font-weight: 700;
+  font-size: 1.18rem;
+  padding: 1rem 2.2rem;
+  border-radius: 28px;
+  box-shadow: 0 6px 24px rgba(245,166,35,0.14);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+  z-index: 11;
+  animation: popIn 1s cubic-bezier(.47,1.64,.41,.8);
+  max-width: 90vw;
+}
+.read-popup-trigger:hover {
+  background: linear-gradient(90deg, #f5a623 0%, #ffe4d9 100%);
+  color: #fff;
+  
+  box-shadow: 0 12px 32px rgba(245,166,35,0.18);
+}
+@keyframes popIn {
+  0% { opacity: 0; transform: translateX(-00%) scale(0.8);}
+  60% { opacity: 1; transform: translateX(-00%) scale(1.08);}
+  100% { opacity: 1; transform: translateX(-00%) scale(1);}
+}
+.read-modal-box {
+  min-width: 340px;
+  max-width: 96vw;
+  animation: fadeInUp 0.6s cubic-bezier(.47,1.64,.41,.8);
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translate(-50%, 20%) scale(0.95);}
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+}
+.read-modal-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 1.5rem 0;
+}
+.read-modal-option-btn {
+  background: linear-gradient(90deg, #ffe4d9 0%, #f5a623 100%);
+  color: #7C5E3C;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 16px;
+  padding: 0.7em 2em;
+  box-shadow: 0 2px 8px rgba(245,166,35,0.11);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+}
+.read-modal-option-btn:hover {
+  background: linear-gradient(90deg, #f5a623 0%, #ffe4d9 100%);
+  color: #fff;
+  transform: scale(1.05);
+}
+.read-modal-list {
+  margin: 1.2rem 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeInList 0.5s;
+}
+@keyframes fadeInList {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.read-modal-list li {
+  background: #fff6e0;
+  border-radius: 10px;
+  padding: 1.1em 1.2em;
+  font-weight: 600;
+  color: #7C5E3C;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(245,166,35,0.09);
+  transition: background 0.16s, color 0.16s, transform 0.16s;
+}
+.read-modal-list li:hover {
+  background: #f5a623;
+  color: #fff;
+  transform: scale(1.03);
+}
+.read-modal-switch {
+  position: absolute;
+  top: 18px;
+  right: 90px;
+  background: linear-gradient(90deg, #ffe4d9 0%, #f5a623 100%);
+  color: #7C5E3C;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border: none;
+  border-radius: 12px;
+  padding: 0.45em 1.3em;
+  box-shadow: 0 2px 8px rgba(245,166,35,0.11);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+  z-index: 1001;
+}
+.read-modal-switch:hover {
+  background: linear-gradient(90deg, #f5a623 0%, #ffe4d9 100%);
+  color: #fff;
+  transform: scale(1.04);
+}
+.read-modal-back {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: linear-gradient(90deg, #ffe4d9 0%, #f5a623 100%);
+  color: #7C5E3C;
+  font-weight: 700;
+  font-size: 0.98rem;
+  border: none;
+  border-radius: 12px;
+  padding: 0.45em 1.3em;
+  box-shadow: 0 2px 8px rgba(245,166,35,0.11);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+  z-index: 1001;
+}
+.read-modal-back:hover {
+  background: linear-gradient(90deg, #f5a623 0%, #ffe4d9 100%);
+  color: #fff;
+  transform: scale(1.04);
+}
+@media (max-width: 600px) {
+  .read-popup-trigger { font-size: 0.98rem; padding: 0.7rem 1.2rem; }
+  .read-modal-switch { right: 60px; font-size: 0.89rem; padding: 0.4em 0.9em;}
+  .read-modal-back { right: 10px; font-size: 0.89rem; padding: 0.4em 0.9em;}
+}
+.read-modal-btn-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.read-modal-switch,
+.read-modal-back {
+  position: static !important; /* Remove absolute positioning */
+  margin: 0;
+}
+.read-modal-btn-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+.read-modal-switch,
+.read-modal-back {
+    position: static !important;
+    margin: 0;
+}
+/* Add this CSS */
+.read-modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem 1.5rem 2rem; /* Added top padding */
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+.hero {
+  margin-bottom: 1.2rem !important;
+  padding-bottom: 1.2rem !important;
+  gap: 1.2rem !important;
+}
+.book-reco-trigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #ffe4d9 0%, #f5a623 100%);
+  color: #7C5E3C;
+  font-weight: 700;
+  font-size: 1.18rem;
+  padding: 1rem 2.2rem;
+  border-radius: 28px;
+  box-shadow: 0 6px 24px rgba(245,166,35,0.14);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+  margin: 0 auto 2rem auto;
+  max-width: 90vw;
+  animation: popIn 1s cubic-bezier(.47,1.64,.41,.8);
+}
+.book-reco-trigger:hover {
+  background: linear-gradient(90deg, #f5a623 0%, #ffe4d9 100%);
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(245,166,35,0.18);
+  transform: scale(1.04);
+}
+/* --- Responsive Navigation Grid for Small Screens --- */
+@media (max-width: 700px) {
+  nav ul {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 0.4rem;
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    background: linear-gradient(90deg, #fff6e0 0%, #f9f6e9 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(245, 166, 35, 0.10);
+    list-style: none;
+    margin: 0;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    font-size: 1.05rem;
+    padding: 0.7em 0;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    color: #7C5E3C;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: color 0.2s, background 0.2s;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: rgba(245, 166, 35, 0.11);
+    color: #f5a623;
+  }
+}
+
+/* --- Stack vertically on very small screens --- */
+@media (max-width: 400px) {
+  nav ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="site-headline">
+        Portfolio & Personal Website of Bhavya Jain – Showcasing My Journey in Entrepreneurship, Storytelling, and Technology
+    </div>
+    <div class="container">
+      <header>
+        <h1 style="display: none;">Bhavya Jain</h1>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <section class="hero fade-in">
+        <div class="profile">
+            <div class="profile-image">
+                <img src="bhavya.jpg" alt="Bhavya Jain">
+            </div>
+            <h2 class="name">Bhavya Jain</h2>
+            <p class="tagline">Aspiring Entrepreneur | Storyteller | Business & Tech Enthusiast</p>
+            <div class="profile-details-inline">
+                <span class="location"><strong> Location:</strong>  Kunkuri, Chhattisgarh</span>
+                <span class="birthday"><strong> Birthday:</strong>  5 March 2005</span>
+              </div>
+              
+            <div class="contact">
+
+                <a href="tel:+918719884075"><i class="fas fa-phone"></i> +91 8719884075</a>
+                <a href="mailto:bjain5480@gmail.com"><i class="fas fa-envelope"></i> bjain5480@gmail.com</a>
+            </div>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/bhavya-jain-34bb45232/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/_bhavyajain._/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/myspirals17" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="info">
+            <div class="section clickable" id="about" data-modal="about">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-content">
+                    <strong>Curious about the real Bhavya?</strong><br>
+                    From sports to mathematics to heartfelt stories to business, discover my journey in business, sports, and writing amidst engineering. I blend analytical thinking with creative storytelling, bringing a unique perspective to everything I do. With experience in retail management and a passion for innovation, I'm constantly seeking opportunities to learn, grow, and make an impact.
+                </p>
+                <a href="#" class="story-link"> </i></a>
+            </div>
+            <div class="section fade-in delay-1 clickable" data-modal="focus">
+                <h2 class="section-title">Current Focus</h2>
+                <p class="about-content">
+                    Currently pursuing my BBA in Digital Business & Entrepreneurship at IIM Bangalore while building my entrepreneurial skills. Passionate about merging business acumen with technological innovation to create impactful solutions. Actively involved in exploring market trends and developing business strategies that align with the digital transformation era.
+                </p>
+            </div>
+        </div>
+        <div class="read-popup-trigger" id="readPopupTrigger">
+          <i class="fas fa-book-open"></i> Want to read something?
+        </div>
+        
+        
+          
+    </section>
+    <!-- SKILLS -->
+    <section class="section fade-in delay-2" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-modal="content-writing">
+                <div class="skill-icon"><i class="fas fa-pen-fancy"></i></div>
+                <h3 class="skill-name">Content Writing</h3>
+                <p>Creating engaging content across various formats</p>
+                
+            </div>
+            <div class="skill-card" data-modal="communication">
+                <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                <h3 class="skill-name">Communication</h3>
+                <p>Exceptional interpersonal and presentation skills</p>
+                
+            </div>
+            <div class="skill-card" data-modal="marketing">
+                <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
+                <h3 class="skill-name">Marketing</h3>
+                <p>Customer-focused strategies and management</p>
+                
+            </div>
+            <div class="skill-card" data-modal="mathematical-thinking">
+                <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                <h3 class="skill-name">Mathematical Thinking</h3>
+                <p>Strong analytical and problem-solving abilities</p>
+                
+            </div>
+        </div>
+    </section>
+    <!-- HOBBIES -->
+    <section class="section fade-in delay-2" id="hobbies">
+        <h2 class="section-title">Hobbies</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-modal="storytelling">
+                <div class="skill-icon"><i class="fas fa-book-open"></i></div>
+                <h3 class="skill-name">Storytelling</h3>
+                <p>Creating narratives that inspire and engage</p>
+            </div>
+            <div class="skill-card" data-modal="reading-books">
+                <div class="skill-icon"><i class="fas fa-book"></i></div>
+                <h3 class="skill-name">Reading Books</h3>
+                <p>Expanding knowledge through literature</p>
+            </div>
+            <div class="skill-card" data-modal="sports">
+                <div class="skill-icon"><i class="fas fa-running"></i></div>
+                <h3 class="skill-name">Sports</h3>
+                <p>Badminton and cricket enthusiast</p>
+            </div>
+            <div class="skill-card" data-modal="innovation">
+                <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3 class="skill-name">Innovation</h3>
+                <p>Exploring new business and tech ideas</p>
+            </div>
+        </div>
+    </section>
+    <!-- EDUCATION -->
+    <!-- EDUCATION -->
+    <section class="section fade-in delay-3" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="iim-bangalore">
+                    <span class="timeline-date">2024-2027</span>
+                    <img src="iim-Logo.png" 
+                         alt="IIM Bangalore Logo" 
+                         style="height:36px;vertical-align:middle;margin-right:10px;">
+                    <h3 class="timeline-title" style="display:inline;">IIM Bangalore</h3>
+                    <p class="timeline-description">BBA (Digital Business & Entrepreneurship)</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="ivb-chennai">
+                    <span class="timeline-date">2025-2028</span>
+                    <img src="ivb-logo.png" 
+                         alt="IVB Chennai Logo" 
+                         style="height:36px;vertical-align:middle;margin-right:10px;">
+                    <h3 class="timeline-title" style="display:inline;">Institute of Venture Building, Chennai</h3>
+                    <p class="timeline-description">Under graduate programme with specialization in Finance & Marketing</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="vit-vellore">
+                    <span class="timeline-date">2024</span>
+                    <img src="Vit logo.png"
+                         alt="VIT Vellore Logo"
+                         style="height:36px;vertical-align:middle;margin-right:10px;">
+                    <h3 class="timeline-title" style="display:inline;">VIT Vellore</h3>
+                    <p class="timeline-description">B.Tech CSE (Dropped out)</p>
+                </div>
+            </div>
+            <!-- Competitive Exams Section -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="competitive-exams">
+                    <span class="timeline-date">2023</span>
+                    <h3 class="timeline-title">Competitive Exams</h3>
+                    <ul style="margin-top:0.5em; margin-bottom:0; padding-left:1.2em; font-size:0.98em;">
+                        <li><strong>JEE Main:</strong> 87.4 percentile</li>
+                        <li><strong>COMEDK UGET:</strong> 8,000 rank</li>
+                        <li><strong>MHTCET:</strong> 7,000 rank</li>
+                        <li><strong>Manipal Entrance:</strong> 6,000 rank</li>
+                        <li>Appeared for KVPY,NTSE,Physics and chemistry Olympiads</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Competitive Exams Section -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="12th-grade">
+                    <span class="timeline-date">2023</span>
+                    <h3 class="timeline-title">12th Grade (PCM with CS)</h3>
+                    <p class="timeline-description">78%</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="10th-grade">
+                    <span class="timeline-date">2021</span>
+                    <h3 class="timeline-title">10th Grade</h3>
+                    <p class="timeline-description">87.4%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- WORK EXPERIENCE -->
+    <section class="section fade-in delay-3" id="experience">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="retail-business">
+                    <span class="timeline-date">2022 - Present</span>
+                    <h3 class="timeline-title">Retail Business Management (Family Business)</h3>
+                    <ul class="job-responsibilities">
+                        <li>Managed daily operations of Kumar Stores, Kunkuri.</li>
+                        <li>Oversaw inventory and streamlined supply chain logistics.</li>
+                        <li>Enhanced customer service and vendor communication.</li>
+                        <li>Implemented local marketing strategies to increase footfall.</li>
+                        <li>Gained hands-on experience in finance, sales, and people management.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" data-modal="content-writing-intern">
+                    <span class="timeline-date"> 2024</span>
+                    <h3 class="timeline-title">Content Writing Intern</h3>
+                    <ul class="job-responsibilities">
+                        <li>Created engaging content for digital platforms.</li>
+                        <li>Developed brand voice guidelines and content strategy.</li>
+                        <li>Collaborated with marketing team on campaigns.</li>
+                        <li>Improved engagement metrics by 35% through optimized content.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ACHIEVEMENTS -->
+    <section class="section fade-in delay-4" id="achievements">
+        <h2 class="section-title">Sporting Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card" data-modal="badminton">
+                <div class="achievement-icon"><span style="font-size:2rem;">🏸</span></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">State-level Badminton Player</h3>
+                    <p class="achievement-description">Represented district in state championships and secured top positions in various tournaments.</p>
+                </div>
+            </div>
+            <div class="achievement-card" data-modal="cricket">
+                <div class="achievement-icon"><span style="font-size:2rem;">🏏</span></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">National-level Cricket Player</h3>
+                    <p class="achievement-description">Participated in national cricket tournaments and represented regional teams at prestigious competitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CERTIFICATIONS -->
+    <section class="section fade-in delay-5" id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card" data-modal="ttt-cert">
+                <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Certified Writer from Terribly Tiny Tales</h3>
+                    <p class="achievement-description">Recognized for exceptional creative writing abilities and narrative techniques.</p>
+                </div>
+            </div>
+            <div class="achievement-card" data-modal="humans-of-faith">
+                <div class="achievement-icon"><i class="fas fa-book"></i></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Anthology Contributor: Humans of Faith</h3>
+                    <p class="achievement-description">Published author in a recognized anthology featuring stories of human resilience and belief.</p>
+                </div>
+            </div>
+            <div class="achievement-card" data-modal="digital-marketing">
+                <div class="achievement-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">Digital Marketing Fundamentals</h3>
+                    <p class="achievement-description">Certified by Google Digital Garage for proficiency in digital marketing concepts and application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+        
+    </div>
+
+    <!-- MODAL HTML -->
+    <div id="modalOverlay" class="modal-overlay"></div>
+    <div id="modalBox" class="modal-box">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div id="modalContent" class="modal-content"></div>
+    </div>
+    <!-- Read Modal is now OUTSIDE the main modal! -->
+    <div id="readModalOverlay" class="modal-overlay"></div>
+    <div id="readModalBox" class="modal-box read-modal-box">
+        <span class="modal-close" id="readModalClose">&times;</span>
+        <div id="readModalContent" class="modal-content"></div>
+    </div>
+    
+
+    
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const modalDetails = {
+          about: `<h2>About Me</h2>
+  <p>
+    <strong>Curious about the real Bhavya?</strong><br>
+    I am an aspiring entrepreneur, storyteller, and business & tech enthusiast from Kunkuri, Chhattisgarh. My journey weaves through mathematics, engineering, business, and creative writing. I thrive on learning, building, and inspiring others—whether it's managing a family business, writing for digital platforms, or competing in sports.
+  </p>
+  <h3 style="color:#f5a623; margin-top:1.5em;">My Journey</h3>
+  <ul style="margin:1em 0 0 1em; line-height:1.7;">
+    <li><b>2019:</b> National-level cricket debut – started my journey as a competitive athlete(played at eden gardens for chhattisgarh).</li>
+    <li><b>2021:</b> Published my first short story – discovered my passion for creative writing.</li>
+    <li><b>2024:</b> Dropped out of VIT Vellore, enrolled at IIM Bangalore to pursue business dreams.</li>
+    <li><b>2024:</b> Began working full-time in the family business, applying my skills and learning hands-on.</li>
+  </ul>`,
+                focus: `<h2>Current Focus</h2>
+  <p>
+    I am currently pursuing my BBA in Digital Business & Entrepreneurship at IIM Bangalore. My focus is on merging business acumen with technological innovation to create impactful solutions. I am actively involved in exploring market trends, developing business strategies, and building my entrepreneurial skills for the digital era.
+  </p>`,
+                "content-writing": `<h2>Content Writing</h2>
+  <p>I have published 30+ stories and articles, including for Terribly Tiny Tales. My expertise includes micro-fiction, blog writing, and SEO-optimized web content. I love blending creativity with clarity to engage diverse audiences.</p>`,
+                "communication": `<h2>Communication</h2>
+  <p>Fluent in English and Hindi, I have delivered presentations, facilitated workshops, and built strong client relationships. My communication skills help me connect with people and convey ideas effectively.</p>`,
+                "marketing": `<h2>Marketing</h2>
+  <p>Experienced in developing customer-focused marketing strategies for both retail and digital platforms. I have hands-on experience in social media campaigns, branding, and local promotions.</p>`,
+                "mathematical-thinking": `<h2>Mathematical Thinking</h2>
+  <p>Strong analytical and problem-solving abilities, honed through academic rigor and business analytics. I enjoy using data and logic to drive informed decisions.</p>`,
+                "storytelling": `<h2>Storytelling</h2>
+  <p>Storytelling is my passion—I craft narratives that inspire, move, and connect people. My stories have been published in anthologies and online platforms, and I am currently working on my book "surviving on anecdotes" .</p>`,
+                "reading-books": `<h2>Reading Books</h2>
+  <p>I am an avid reader of fiction, non-fiction, and business literature. Books fuel my imagination and provide new perspectives for my writing and entrepreneurial journey.</p>`,
+                "sports": `<h2>Sports</h2>
+  <p>State-level badminton and national-level cricket player. Sports have taught me discipline, teamwork, and resilience. I also enjoy teaching badminton to kids in my community.</p>`,
+                "innovation": `<h2>Innovation</h2>
+  <p>I love exploring new ideas in business and technology, from digital transformation to process automation. I am always eager to experiment and learn from failure.</p>`,
+                "iim-bangalore": `<h2>IIM Bangalore</h2>
+  <p>BBA (Digital Business & Entrepreneurship), 2024-2027.<br>
+  Learning from India's top business minds and building my entrepreneurial foundation.</p>`,
+                "ivb-chennai": `<h2>Institute of Venture Building, Chennai</h2>
+  <p>Finance & Marketing, 2025-2028.<br>
+  Specializing in finance and marketing to further my business acumen.</p>`,
+                "vit-vellore": `<h2>VIT Vellore</h2>
+  <p>B.Tech CSE (2024, Dropped out).<br>
+  Left to pursue my passion for business and entrepreneurship full-time.</p>`,
+                "competitive-exams": `<h2>Competitive Exams</h2> 
+                 <li><strong>JEE Main:</strong> 87.4 percentile</li>
+                        <li><strong>COMEDK UGET:</strong> 8,000 rank</li>
+                        <li><strong>MHTCET:</strong> 7,000 rank</li>
+                        <li><strong>Manipal Entrance:</strong> 6,000 rank</li>
+                        <li>Appeared for KVPY,NTSE,Physics and chemistry Olympiads</li>`,
+
+                "12th-grade": `<h2>12th Grade (PCM with CS)</h2>
+  <p>Scored 78% in 2023. Developed a strong foundation in mathematics, physics, chemistry, and computer science.</p>`,
+                "10th-grade": `<h2>10th Grade</h2>
+  <p>Scored 87.4% in 2021. Built a solid academic base and honed my analytical skills.</p>`,
+                "retail-business": `<h2>Retail Business Management (Family Business)</h2>
+  <ul>
+      <li>Managed daily operations of Kumar Stores, Kunkuri.</li>
+      <li>Oversaw inventory and streamlined supply chain logistics.</li>
+      <li>Enhanced customer service and vendor communication.</li>
+      <li>Implemented local marketing strategies to increase footfall.</li>
+      <li>Gained hands-on experience in finance, sales, and people management.</li>
+  </ul>`,
+                "content-writing-intern": `<h2>Content Writing Intern for TTT(Terribly Tiny Tales)</h2>
+  <ul>
+      <li>Created engaging content for digital platforms.</li>
+      <li>Developed brand voice guidelines and content strategy.</li>
+      <li>Collaborated with marketing team on campaigns.</li>
+      <li>Improved engagement metrics by 35% through optimized content.</li>
+  </ul>`,
+                "badminton": `<h2>🏸 State-level Badminton Player</h2>
+  <p>Represented my district in state championships and secured top positions in various tournaments. Sports taught me discipline, focus, and resilience.</p>`,
+                "cricket": `<h2>🏏 National-level Cricket Player</h2>
+  <p>Participated in national cricket tournaments and represented regional teams at prestigious competitions. Cricket has instilled teamwork and leadership in me.</p>`,
+                "ttt-cert": `<h2>Certified Writer from Terribly Tiny Tales specially in writing short stories for brands</h2>
+  <p>
+    <strong>Terribly Tiny Tales (TTT)</strong> is India's premier creative writing community. I completed their intensive content writing program, which included:
+    <ul>
+      <li>Live sessions with industry experts on storytelling, digital content, and marketing.</li>
+      <li>Assignments and portfolio development, with personalized feedback from mentors.</li>
+      <li>Exposure to writing for various platforms—blogs, social media, short stories, and branded content.</li>
+      <li>Networking with a vibrant community of 10,000+ writers and access to a placement/job portal.</li>
+    </ul>
+    <em>My TTT journey sharpened my storytelling, editing, and digital writing skills, preparing me for both creative and professional writing roles.</em>
+  </p>
+  <a href="https://learn.terriblytinytales.com/courses/writing-that-sells-pro" target="_blank" style="color:#4a90e2; text-decoration:underline;">Learn more about TTT Certification</a>`,
+                "humans-of-faith": `<h2>Anthology Contributor: Humans of Faith</h2>
+  <p>
+    <strong>Humans of Faith</strong> is a published anthology celebrating stories of resilience, belief, and humanity. My selected story reflects on hope, empathy, and the human spirit.
+    <ul>
+      <li>Contributed a personal narrative on overcoming adversity and the power of faith.</li>
+      <li>Collaborated with editors and fellow authors to refine the story for publication.</li>
+      <li>Participated in author events and discussions on the impact of storytelling in building community.</li>
+    </ul>
+    <em>This experience deepened my appreciation for real-life narratives and the importance of sharing authentic voices in published works.</em>
+  </p>`,
+                "digital-marketing": `<h2>Digital Marketing Fundamentals (Google Digital Garage)</h2>
+  <p>
+    Completed the Google Digital Garage certification, gaining practical knowledge in:
+    <ul>
+      <li>SEO, SEM, and social media marketing fundamentals</li>
+      <li>Building and optimizing websites for business</li>
+      <li>Analytics and measuring digital campaign performance</li>
+    </ul>
+    <em>This certification has equipped me with the skills to promote brands and businesses effectively in the digital world.</em>
+  </p>
+  <a href="https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing" target="_blank" style="color:#4a90e2; text-decoration:underline;">See the course</a>`
+        };
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalBox = document.getElementById('modalBox');
+        const modalClose = document.getElementById('modalClose');
+        const modalContent = document.getElementById('modalContent');
+
+        // --- MODIFIED: Ensure only one modal is open at a time ---
+        document.body.addEventListener('click', function(e) {
+            let target = e.target;
+            while (target && target !== document.body) {
+                if (target.dataset && target.dataset.modal) {
+                    const key = target.dataset.modal;
+                    if (modalDetails[key]) {
+                        // Hide read modal if open
+                        document.getElementById('readModalOverlay').style.display = 'none';
+                        document.getElementById('readModalBox').style.display = 'none';
+                        modalContent.innerHTML = modalDetails[key];
+                        modalOverlay.style.display = 'block';
+                        modalBox.style.display = 'block';
+                    }
+                    break;
+                }
+                target = target.parentElement;
+            }
+            if (e.target === modalOverlay || e.target === modalClose) {
+                modalOverlay.style.display = 'none';
+                modalBox.style.display = 'none';
+            }
+        });
+
+        // Smooth scroll for nav
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const section = document.querySelector(href);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // --- Read Modal Logic ---
+        const poems = [
+        {
+        title: "Tick tock, time stop",
+        text: `I wish,
+I could snap my fingers 
+Whilst making smoke rings in the air
+Closing my eyes,
+With the circle ghosts in the 
+Smoke,
+Living nostalgic
+And 
+I am still in utter disbelief,
+How are we supposed to set apart
+Like rains from the cloud,
+I want to shout,
+But the passage of my words 
+Are in a curfew,
+And it got vaporized.
+
+But for the past time,
+A jerk of happiness flowing through my veins,
+Unshaped
+Like the sand in the desert,
+The air I am exhaling is full of love,
+For the past time
+Whilst the sunrays hopping up and down,
+Turning shades to heat,
+Heat to love,
+Love to memories,
+Memories to vapour.
+
+I am sitting near the window,
+Watching the bench below the street lights,
+That does not give any light 
+It had a thing like bright face glowing in dark,
+Having a slideshow in my fore brain,
+There was nothing visible,
+Still I had a sight,
+And for instance
+I want to keep it close
+hold it tight.
+
+All the sight out there had a
+Blurred image of the 
+Emanation from my childhood,
+I not often meet with those,
+As if it gets diffused mysteriously in crowded street,
+I gazed abstractedly,
+Out of the windows 
+Looking for a shadow in darkness
+As the light was not bright.
+
+I thought I could get inside it,
+But I was already inside the moment,
+The window through which the smoke rings vanished ,
+Was the depth 
+And not the moment,
+My brain that was frozen,
+Stuck in time.
+For an eternity
+In heart of crystal
+As if time was passing,
+But I got a portal through happiness,
+Was like listening to lullabies.
+
+Whilst the tunes of days passing by 
+Swaying in my head,
+And I have been perfectly content,
+As if the endless rains in the monsoon,
+Inexhaustible 
+So as to remain for thousands of years
+
+Stop the tickling of the clock
+Live for a moment and 
+Not survive for an eternity,
+Relish the profound memories
+Coming for a hundredth of second
+In hope to mend the timeline,
+Stop myself doing the snap 
+Watching the clouds full of water
+Shrouded by the relics from past,
+In the heart of fire
+Full of betrayal,
+For,
+The moment betrayed me
+In an attempt to revive,
+All it did was hurt.
+
+I now want to stop the tick tock of clock
+So as to stop all the day dreams 
+And the nightmares,
+Empty my brain,
+For,
+Only the moment
+I am living now remains.
+And again I wish,
+Tick tock,
+Time stops.`
+      },
+      {
+        title: "If tree were a stairway/starway",
+        text: `Someone once told me about the village at the end of the world,
+Where mountains wore snow hats and 
+Water in the river is like mirror.
+
+An old dusty mud house stood in middle of the forest which had pine trees which often shivered on cold October evenings.
+
+Who had no one but one friend, 
+Whom he lost in the attacks for good.
+He started counting the days for the world to end.
+
+But nothing changed,
+Life was going on the same steady speed,
+He would sit on the porch 
+Under the starlit sky,
+Missing his days with grandpaa.
+
+Untill he spotted a shooting star,
+And as his dadi said,
+Ask for wishes when seeing a falling star.
+He mumbled"i want to meet him one day".
+
+And the star couldn't take the weight of it all,
+And it stumbled down from the sky,
+Falling on the man's backyard
+Flickering and losing light.
+
+He didn't have a split thought,
+He took the star in his palm,
+And buried it under the ground.
+And watered it for 10 days,untill he saw a tiny sprout coming up.... That night,
+He went to sleep early,
+Taking his sleeping pills,
+Whilst that,
+The tree grew from the ground disappearing into the clouds.
+
+And next morning when he woke up,
+He could not believe his eyes,
+As he could no longer see the top of the tree,
+And within that time he saw his grandpa coming down, smiling.
+As if the tree were a stairway.`
+      },
+      {
+        title: "Fairytales to the moon",
+        text: `Everyday
+I used to tell Stories and fairytales to the moon and constellations,
+Stories of fire to the Orion,
+Love stories and tragedies to Ursa major
+About Gods and sports to Cygnus,
+And many more.
+With innocence and sometimes a heavy heart.
+
+Just with the bit of trauma hidden 
+Inside myself,
+And a feeling of loss
+On the cloudy nights 
+For,
+I didn't have the listeners to my stories.
+
+Amidst the happy stories you helped me write on the sand and you wrote in the sky,
+Like a fairy tale,
+Happily.
+
+The gifts stars left for the every 10th hour,
+Just to disappear as if I don't need him.
+Sometimes I make stories of stars
+Like,
+The ones I etched on the sand.
+Which made the pathways for the serpents,
+Home to me.
+
+A few days back,
+I replaced them
+For the very first time and tied it to the windows of my house,
+Like the thousands of shimmering Cresent moons over Jupiter,
+And 
+Making my window the pavement of stories.
+
+And tonight when I untie,
+all the moons reach you,
+And Whistle it to you,
+And tell that
+A child down the road
+Draws clouds in the sand.
+
+What if even the moon's lost the path,
+And went where those harp lullabies reside,
+And for the first time
+Sing it to a void.
+
+And then autoplay stories along with my lullabies,
+And 
+Erase and draw the clouds again,
+Reshaping it.
+
+I know my lullabies and your letters live on their own 
+Two parallel line,
+That would probably never meet,
+Except for a glitch in the arrow of time.
+
+Both like the sun,
+Undisputed object towering,
+But not to be held directly.
+
+All the possibilities denied and the hopes shattered,
+And to grieve for the thing I didn't knew even existed.
+
+But still I hoped it did,
+In my half remembered dreams,
+There rays are my hopes and the void is my scar.
+
+I told my secrets to the moon,
+So that it tells those to the stars.
+
+My dreams now suffused in water
+With the particles of sand,
+And detached sorrow,
+With the moaning of the wounded.
+
+With the gravity blunting the 
+Edge of those sharp hope,
+And now the details of the imaginary stories would slip from the minds grip.
+
+And as those stories fall down,
+Like snow from the roof,
+And I feel a bit less numb,
+As the snow lets me recall all those stories again.`
+      }
+        ];
+        const stories = [
+        {
+        title: "the boatman echoed",
+        text: `Banaras was a place very close to my heart.
+I never have been to Banaras, but somehow or the other it feels pleasing and there's a sense of belongingness with a tinge of sadness when it comes about that place.
+
+When I was 12, a day 
+Baba, Mumma, Me and Di were walking on the road as it was Saturday then.
+On Saturdays, Baba is a bit free and relaxed, so we forced him to come for a walk. Mumma made that happen.
+I was holding Mumma’s hand & Di was holding Baba’s.
+Then I saw a star-shaped stone on the road and I started crying because, for me stars were always precious as I believed it was Dadaji’s.
+Even baba made me believe it.
+So, when I started to cry,
+Di left Baba’s hand and came to me, held my hands and took me back home.
+Whilst that, Baba and Mumma also followed Di.
+While we reached home, I was crying and so Di made me sleep holding my hands.
+Then, She told me a story,
+A story related to Banaras and Dadaji which I remember like a half dream.
+
+When baba was 10, Dadaji and Baba went to Banaras'
+every year on the start of spring
+Baba and Dadaji used to travel in month of March.
+Dadaji liked taking Baba to places,
+Telling him stories about how it came into being,
+And baba listened to all of those,
+While dadaji held his hands and walked down the road.... Dadaji once told about the boatman that lived in the ghats of Banaras, 
+And how his life was.
+Baba don’t remember much about that incident as he was only 10.
+But Baba remembered,
+The boatman always used to say, “When the world stops, the stories proceed,
+And when the rain stops the boat sails.”
+
+This is exact words of the story which Dadaji told
+And then Baba, at that time couldn't understand what it meant.
+As for baba the world was in the hands of Dadaji,
+But Baba didn't question as Dadaji used to say once you are my age, you will understand.
+So they both again proceeded to next piece of stories which it included of Priest,
+A Beggar , a Cobbler 
+And many more from the trip of Banaras where Dadaji and Baba were for 12 days.
+
+5th march to 16th march 
+
+Now when Baba remembers those
+days, his eyes fill with tear's and Baba
+also doesn't have Dadaji.
+And the last trip, they had was to
+Banaras as after that Dadaji fell ill
+And then he became a Star
+And
+That is why Baba loved stars too.
+When Dadaji died,
+Baba took a star shaped stone and
+took it together whenever & wherever
+he went.
+He even told me about this when I
+was 8.
+So when I saw the stone, I cried.
+But I had Di with me,
+to help me sleep.
+But as Dadaji went,
+Di will too.
+This is what I thought when I was 10.
+But Di's touch made me forget the
+negative thoughts at that time,
+And again
+That happened and Di was there
+And so I could again sleep well.
+But now neither do I have Di,
+Nor do I have Baba,
+Nor do I have Dadaji.
+But all of them are my star-shaped
+stones,
+Always in my heart and at the back of
+my almirah,
+Where my heart is
+And hence even in cloudy nights
+when there are no stars, I have 3
+stars with me.
+And again the Boatman's word
+echoed
+"When the world stops, the stories
+proceed."
+As for me when I lost all of them the
+world stopped.
+But then again the story of mine and
+theirs which will forever proceed!`
+      },
+      {
+        title: "The gift story",
+        text: `I remember not many stories that Baba told me,
+But there are few I remember,
+But the one which is exactly close to my heart is the one which baba told me when I was 8 this was the first time I saw tear in the eye's of baba and as he terms it definitely was his last,
+He regretted not telling me stories,
+Few of his father told.
+But I do remember of when I was fond of gifts,
+Any of those,
+small pot from lakha's shop would do the trick,
+And since I was very fond of them,
+Tear in my eyes meant a gift for me.
+Which degraded it's real worth.
+It was as valuable as glimmer of sunshine on a already hot summer day,
+eventually the perpetual arrival of gifts reduced,
+And soon vanished from my closet,
+Whilst that
+I went to Kerela once,
+I met a person who used to give free gifts to children,
+And I was one of them
+But till then my enthusiasm for gifts reduced 
+Due to which I never opened it,
+But Baba says, always value things you recieve from others,
+So I kept it in my wardrobe,
+With the antiques of Kerela's hand woven thread,
+the shines of paper like  Indian Ocean.
+After few years,
+In kolkata I remember Karim chacha,
+Whose auto was my way to work and back,
+Once he said that,
+He is from Kerela,
+Which is the part I got intrigued with,
+I asked more,
+He told, his father (Babban) was a clerk at a government office,
+But every year on 25th December he used to give gifts.
+The winter part of the year,
+Implies holidays.
+But this year there was a lot of work,
+And hustle bustle in the town so Karim chacha was working,
+so was I.
+25th December arrived and Santa too,
+I told Karim chacha that I don't believe in Santa,
+And at that same instant someone knocked the taxi,
+Dressed in red and white,
+He was a Santa.
+
+While Karim chacha told about his father I didn't notice that the Santa in the car got off,
+But he left the same box as I recieved while in Kerela,
+And as soon as I opened it I saw a letter from Baba himself,
+About the gift he arranged for me,
+So I took a leave,
+Went home,
+And opened the box which was a part of my wardrobe for 2 decades
+And all I saw was my favourite piece of blue cap, 
+I really wanted as a child.
+I felt my eyes wet,
+So I looked up at the night sky,
+Because I still believe that dead people become stars,
+And wanted to see baba in the sky!`
+      },
+      {
+        title: "Death of a star",
+        text: `I was 10 and when someone is 10 they don't know much,
+But they make things of their own,
+I, as a child, was very naive,
+And was attached to few things
+particularly stars,
+I believed dadaji is there amongst those billions of stars(i still do)
+I hate rainy season.
+As i couldn't see stars and hence couldn't see grandpa.
+Once we were going to coimbatore and i believed if we go then I'll lose my relation with those stars which i drew on my notebook and assumed those to be grandpa,
+And so I did not go!
+
+Baba always tells about magic, how he was soo attached to magic,
+But i never believed him. I always said there is nothing like magic because i heard it in a cartoon!
+But still,
+One day while walking from temple to home gazing at the stars,
+I held baba's hand and asked him whether earth is the greatest magician,
+And when he held my hand more stiffly, i thought
+I asked something that isn't meant to be.
+But as soon as we reached home,
+He opened a very old box of dadaji and took out a cap,
+And told me a story,
+“Story of a gift”
+And by that time I saw tears in his eyes for the first time.
+With sobby voice, he told me that he regretted not telling me stories that his father told him,
+But that tears falling his from cheeks
+As he said
+Which degraded it's worth,
+It was as precious as a ray of sunshine on an already got summer day.
+He stopped telling and went back to the room!
+We didn't had a conversation about it for a long time,
+One day while walking back home 
+Baba slipped his hand into mine and said,
+Yes the earth is the greatest magician ever,
+While we are the audience,
+And his greatest trick is making us believe there's a horizon,
+The horizon which never ends just like life,
+Because people die their memories don't.
+Baba knelt down and said, “for me you are a memory of your grandpa!”
+I didn't want to leave Baba's hand that day!
+But baba did leave my hand,
+And went, 
+To the place where grandpa is.
+I have traced both the stars now!
+Baba and grandpa both left,
+But they are still there,
+In my palms,
+As they are memories and memories don't die!... So now even rainy season doesn't affect because the star faded,
+It was a death of a star,
+But it now is a memory!`
+      },
+      {
+        title: "Lakha the potter",
+        text: `In the busy streets of the Nani Ghar,
+There lived a Potter named Babu in the neighborhood,
+He took his bag early in the morning walking alone in the crowded Kabir street,
+Which was a fairly walking distance from our house,
+We could see him making beautiful pots from the muddy roof from our house,
+One day 
+Me and didi were talking
+When we noticed Babu was not there today,
+Nor was he in the neighborhood,
+We got to know,
+He changed his residence due to financial problems,
+He couldn't afford to take care of his house with such low income.
+Such was the life in the busy ghazipur,
+Almost everyday the residents changed,
+Just like the position of the moon.
+But these are things Baba told we could do nothing about,
+When i first saw lakha,I was just 11 and Di was 21,
+Jokingly she said,
+You know how you see me everyday just live we saw lakha,
+And like him i would too disappear,
+And all you could do would be, remember.
+I stared her with anger,
+But didn't express it,
+I said Di,
+It would be like the body is there but the heartbeat isn't,
+I came and told baba,
+Di is saying illogical things,
+And told him what she said,
+He said 'don't think much about it, you are way too small for it'.
+I was pretty exasperated by this.
+Because it was baba's thing,
+To not tell me many things,
+And I ignored this,
+But my subconscious didn't,
+The same day I dreamed,
+That when i woke up, there would be no tinge of her,
+Just like in midst of the going away thoughts of di,
+I forgot Lakha,
+Would the same happen to Di,
+In hustle bustle of the busy streets of ghazipur.
+But i forgot these too,
+One day when we were walking in the corridors of Kabir street,
+I saw a pot which had a tinge of lakha's work,
+I told Di,
+He grasped my hand, and didn't let me go to check,
+I was so small that i thought,
+I could do the same with her and not let her go.
+And so I holded her hand ever more tightly,
+And she laughed,
+I still don't know why,
+Maybe she sensed the fear in me.
+And days passed since that,
+The days were not hard,
+But the nights where i couldn't see or talk to her,
+Were the hardest.
+I felt like everynight i felt like drowning into water,
+Just to find di,
+And all I could do was pray,
+And my messages reach her.
+She know what it was there in my mind,
+As all inside my heart were you di.
+All I imagined was two diverging roads,
+That eventually would never meet.
+Or like the wind blowing the leaves apart,
+Still root holding it strong,
+It was like i am unable to explain where it hurts,
+But it does.
+And one day,
+I heard the laughter of you again,
+Didn't know it was coming from my mind itself,
+But this time no one was there to stop me from not letting me not come to you,
+But i still didn't,
+And even though the lines of memories of ours didn't began to blur,
+I was all transparent.
+And that's what matter di,
+And so i know,
+You were like the intricate designs of Lakha,
+Which would never fade from my mind.`
+      }
+        ];
+
+        
+
+        let currentType = null; // "poem" or "story"
+
+        function showReadModal() {
+            // Hide main modal if open
+            modalOverlay.style.display = 'none';
+            modalBox.style.display = 'none';
+            document.getElementById('readModalOverlay').style.display = 'block';
+            document.getElementById('readModalBox').style.display = 'block';
+            showTypeOptions();
+            document.getElementById('readPopupTrigger').style.display = 'none';
+
+        }
+
+        function closeReadModal() {
+          document.getElementById('readModalClose').style.display = 'block';
+
+            document.getElementById('readModalOverlay').style.display = 'none';
+            document.getElementById('readModalBox').style.display = 'none';
+            document.getElementById('readModalContent').innerHTML = '';
+            currentType = null;
+            document.getElementById('readPopupTrigger').style.display = 'flex';
+
+        }
+
+        function showTypeOptions() {
+          document.getElementById('readModalClose').style.display = 'block';
+
+            document.getElementById('readModalContent').innerHTML = `
+                <div style="text-align:center;">
+                    <h2 style="color:#f5a623;">What would you like to read?</h2>
+                    <div class="read-modal-options">
+                        <button class="read-modal-option-btn" onclick="showList('poem')"><i class="fas fa-feather-alt"></i> Poems</button>
+                        <button class="read-modal-option-btn" onclick="showList('story')"><i class="fas fa-book"></i> Stories</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.showList = function(type) {
+            currentType = type;
+            const items = (type === "poem" ? poems : stories);
+            let listHtml = `<ul class="read-modal-list">`;
+            items.forEach((item, idx) => {
+                listHtml += `<li onclick="showWriteup('${type}',${idx})"><i class="fas ${type==='poem'?'fa-feather-alt':'fa-book'}"></i> ${item.title}</li>`;
+            });
+            listHtml += `</ul>`;
+            document.getElementById('readModalContent').innerHTML = `
+                <h2 style="color:#f5a623; text-align:center;">${type === "poem" ? "Poems" : "Stories"}</h2>
+                ${listHtml}
+            `;
+        }
+
+        window.showWriteup = function(type, idx) {
+          document.getElementById('readModalClose').style.display = 'none';
+            const items = (type === "poem" ? poems : stories);
+            let switchType = type === "poem" ? "story" : "poem";
+            let switchLabel = type === "poem" ? "Switch to Stories" : "Switch to Poems";
+            let writeupTitle = items[idx].title;
+            let writeupContent = items[idx].text;
+            document.getElementById('readModalContent').innerHTML = `
+    <div class="read-modal-btn-row">
+        <button class="read-modal-switch" onclick="showList('${switchType}')">${switchLabel}</button>
+       <button class="read-modal-back" onclick="backToResume()">Back to Resume</button>
+    </div>
+    <div style="margin-top:2.5rem; text-align:center;">
+        <h2 style="color:#f5a623;">${writeupTitle}</h2>
+        <pre style="margin:1.2rem 0 0 0; font-size:1.13rem; color:#7C5E3C; line-height:1.7; background:#fff6e0; border-radius:12px; padding:1.5rem; font-family:inherit; text-align:left; white-space:pre-wrap;">
+${writeupContent}
+</pre>
+
+    </div>
+`;
+
+        }
+
+        // Event listeners for open/close
+        document.getElementById('readPopupTrigger').onclick = showReadModal;
+        document.getElementById('readModalOverlay').onclick = closeReadModal;
+        document.getElementById('readModalClose').onclick = closeReadModal;
+
+        window.backToResume = function() {
+    closeReadModal();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
+
+    });
+  
+
+    </script>
+    <footer style="width:100%;text-align:center;padding:1.2rem 0 0.7rem 0; background: #f9f6e9; color: #666; font-size: 1rem; border-top: 1px solid #eee;">
+        © 2025 Bhavya Jain. All rights reserved.
+    </footer>
+</body>
+</html>
